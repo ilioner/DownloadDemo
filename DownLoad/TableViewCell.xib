@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCx-OK-stw">
+                        <rect key="frame" x="266" y="6" width="46" height="30"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="3vh-LJ-sj1"/>
+                            <constraint firstAttribute="width" constant="46" id="cuy-cf-Et6"/>
+                            <constraint firstAttribute="width" secondItem="RCx-OK-stw" secondAttribute="height" multiplier="23:15" id="xoz-g8-bHQ"/>
+                        </constraints>
+                        <state key="normal" title="下载">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="startDownLoad:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jDl-AU-Otu"/>
+                        </connections>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jI-3M-A0j">
+                        <rect key="frame" x="23" y="20" width="218" height="2"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="progressTintColor" red="0.69019607839999997" green="0.043137254899999998" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="trackTintColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leX-o6-kru">
+                        <rect key="frame" x="221" y="6" width="42" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="leX-o6-kru" secondAttribute="height" multiplier="21:8" id="Aa7-MD-Nn0"/>
+                            <constraint firstAttribute="height" constant="16" id="bif-0Y-GU2"/>
+                            <constraint firstAttribute="width" constant="42" id="pWa-4F-7jP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RCx-OK-stw" firstAttribute="leading" secondItem="leX-o6-kru" secondAttribute="trailing" constant="3" id="6bo-yC-JK8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RCx-OK-stw" secondAttribute="trailing" id="Bwy-Vc-OgA"/>
+                    <constraint firstItem="leX-o6-kru" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="c1J-86-w2d"/>
+                    <constraint firstItem="RCx-OK-stw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="uxf-cV-DyZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_label" destination="leX-o6-kru" id="sDM-qe-HEs"/>
+                <outlet property="_progress" destination="9jI-3M-A0j" id="fyv-0G-HG1"/>
+                <outlet property="mainBtn" destination="RCx-OK-stw" id="yv7-ga-5jP"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="52"/>
+        </tableViewCell>
+    </objects>
+</document>
